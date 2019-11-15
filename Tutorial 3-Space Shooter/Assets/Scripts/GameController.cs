@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 
 public class GameController : MonoBehaviour
 {
-    public GameObject hazard;
+    public GameObject[] hazards;
     public Vector3 spawnValues;
     public int hazardCount;
     public float spawnWait;
@@ -16,6 +16,7 @@ public class GameController : MonoBehaviour
     public Text ScoreText;
     public Text RestartText;
     public Text GameOverText;
+    public Text winText;
 
     private bool gameOver;
     private bool restart;
@@ -36,7 +37,7 @@ public class GameController : MonoBehaviour
     {
         if (restart)
         {
-            if (Input.GetKeyDown(KeyCode.R))
+            if (Input.GetKeyDown(KeyCode.Backspace))
             {
                 //Make sure the scene in the parentheses matches the name of scene for this project
                 SceneManager.LoadScene("Main");
@@ -51,6 +52,7 @@ public class GameController : MonoBehaviour
             for (int i = 0; i < hazardCount; i++)
             {
                 //SUMMONS THE ASTEROIDS
+                GameObject hazard = hazards[Random.Range(0, hazards.Length)];
                 Vector3 spawnPosition = new Vector3(Random.Range(-spawnValues.x, spawnValues.x), spawnValues.y, spawnValues.z);
                 Quaternion spawnRotation = Quaternion.identity;
                 Instantiate(hazard, spawnPosition, spawnRotation);
@@ -61,7 +63,7 @@ public class GameController : MonoBehaviour
             //Restart? Game Text
             if (gameOver)
             {
-                RestartText.text = "Press 'R' to restart";
+                RestartText.text = "Press 'Backspace' to restart";
                 restart = true;
                 break;
             }
@@ -76,7 +78,13 @@ public class GameController : MonoBehaviour
 
     void UpdateScore()
     {
-        ScoreText.text = "Score: " + score;
+        ScoreText.text = "Points: " + score;
+        if (score >= 100)
+        {
+            winText.text = "You win! Game by Cheyenne Fiedler";
+            gameOver = true;
+            restart = true;
+        }
     }
 
     public void GameOver()

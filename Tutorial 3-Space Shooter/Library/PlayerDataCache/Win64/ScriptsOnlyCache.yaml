@@ -1,13 +1,16 @@
 ScriptsOnlyBuild:
   usedScripts:
     Assembly-CSharp.dll:
+    - BGScroller
     - DestroyByBoundary
     - DestroyByContact
     - Done_DestroyByTime
+    - EvasiveManeuver
     - GameController
     - Mover
     - PlayerController
     - RandomRotater
+    - WeaponController
     UnityEditor.Graphs.dll:
     - UnityEditor.Graphs.AnimationBlendTree.Graph
     - UnityEditor.Graphs.AnimationBlendTree.GraphGUI
@@ -73,18 +76,26 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 9386}
     - Class: 114
-      Script: {instanceID: 9598}
+      Script: {instanceID: 9550}
     - Class: 114
-      Script: {instanceID: 9618}
+      Script: {instanceID: 9600}
     - Class: 114
-      Script: {instanceID: 9728}
+      Script: {instanceID: 9620}
     - Class: 114
-      Script: {instanceID: 10550}
+      Script: {instanceID: 9658}
     - Class: 114
-      Script: {instanceID: 10554}
+      Script: {instanceID: 9732}
+    - Class: 114
+      Script: {instanceID: 10366}
+    - Class: 114
+      Script: {instanceID: 10556}
+    - Class: 114
+      Script: {instanceID: 10560}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
+      Script: {instanceID: 0}
+    - Class: 135
       Script: {instanceID: 0}
     - Class: 136
       Script: {instanceID: 0}
@@ -549,6 +560,12 @@ ScriptsOnlyBuild:
     className: SignalAsset
   - hash:
       serializedVersion: 2
+      Hash: be2d1663d6bc8ce39ce9c8dea6a963c7
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: BGScroller
+  - hash:
+      serializedVersion: 2
       Hash: afc5b93a7b192de2dcb3832fe35a5c7e
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
@@ -567,7 +584,7 @@ ScriptsOnlyBuild:
     className: DestroyByContact
   - hash:
       serializedVersion: 2
-      Hash: 5c54d781d4e44e8d49d6d9710a8d061c
+      Hash: b36f085b5695abcb9b2aad414f33dc0c
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: GameController
@@ -583,6 +600,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
     className: AnimationPlayableAsset
+  - hash:
+      serializedVersion: 2
+      Hash: de7d6a5820dded6c7f75780e98f1dc41
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: WeaponController
   - hash:
       serializedVersion: 2
       Hash: 303ad70ce203ad874efe2965d0fbcff9
@@ -765,6 +788,12 @@ ScriptsOnlyBuild:
     className: AudioTrack
   - hash:
       serializedVersion: 2
+      Hash: e8cf919b83d2ca8b58cf56ce89e06049
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: EvasiveManeuver
+  - hash:
+      serializedVersion: 2
       Hash: c3d3430df9e3ea95e3e3d587961390fb
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
@@ -850,5 +879,5 @@ ScriptsOnlyBuild:
   platform: 19
   scenePathNames:
   - Assets/_Scenes/Main.unity
-  playerPath: G:/Github/Tutorial-3/Tutorial 3-Space Shooter/Fielder_Cheyenne_DIG3480_Tutorial3_Build/Tutorial
+  playerPath: G:/Github/Tutorial-3/Tutorial 3-Space Shooter/Fiedler_Cheyenne_DIG3480_Challenge3/Tutorial
     3-Space Shooter.exe
